@@ -23,7 +23,7 @@ const NavLink: FunctionComponent<NavLinkProps> = ({ href, children }) => {
 	)
 }
 
-export function Header() {
+export const Header = () => {
 	const { url } = useLocation();
 
 	return (
