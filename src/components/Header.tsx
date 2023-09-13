@@ -1,6 +1,6 @@
 import { FunctionComponent, isValidElement } from 'preact';
 import { useLocation } from 'preact-iso';
-import { classes } from '../utils/classes';
+import { classes } from '@/src/utils/classes';
 
 type NavLinkProps = {
 	href: string

@@ -1,4 +1,4 @@
-import preactLogo from '../../assets/preact.svg';
+import preactLogo from '@/src/assets/preact.svg';
 
 type ResourceProps = {
 	href: string
