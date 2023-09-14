@@ -6,7 +6,7 @@ import { Home } from './pages/Home/index.jsx';
 import { NotFound } from './pages/_404.jsx';
 import './index.css';
 
-export function App() {
+export const App = () => {
 	return (
 		<LocationProvider>
 			<Header />
@@ -20,4 +20,4 @@ export function App() {
 	);
 }
 
-render(<App />, document.getElementById('app'));
+render(<App />, document.getElementById('app')!);

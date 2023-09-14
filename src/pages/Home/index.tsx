@@ -1,6 +1,20 @@
-import preactLogo from '../../assets/preact.svg';
+import preactLogo from '@/src/assets/preact.svg';
 
-export function Home() {
+type ResourceProps = {
+	href: string
+	title: string
+	description: string
+}
+const Resource = (props: ResourceProps) => {
+	return (
+		<a href={props.href} target="_blank" class="px-6 py-3 rounded-lg text-left no-underline text-gray-800 bg-gray-100 border border-solid border-transparent hover:border-black hover:resource-shadow-hover dark:text-gray-50 dark:bg-gray-900 dark:hover:border-gray-300">
+			<h2>{props.title}</h2>
+			<p>{props.description}</p>
+		</a>
+	);
+}
+
+export const Home = () => {
 	return (
 		<div class="home">
 			<a href="https://preactjs.com" target="_blank">
@@ -25,14 +39,5 @@ export function Home() {
 				/>
 			</section>
 		</div>
-	);
-}
-
-function Resource(props) {
-	return (
-		<a href={props.href} target="_blank" class="px-6 py-3 rounded-lg text-left no-underline text-gray-800 bg-gray-100 border border-solid border-transparent hover:border-black hover:resource-shadow-hover dark:text-gray-50 dark:bg-gray-900 dark:hover:border-gray-300">
-			<h2>{props.title}</h2>
-			<p>{props.description}</p>
-		</a>
 	);
 }
